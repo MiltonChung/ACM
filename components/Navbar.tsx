@@ -13,16 +13,15 @@ import {
 } from "./svg/icons";
 
 const navLinks = [
-  { link: "/", label: "home", svg: <HomeIcon /> },
-  { link: "/about", label: "about", svg: <AboutIcon /> },
-  { link: "/events", label: "events", svg: <EventsIcon /> },
-  { link: "/resources", label: "resources", svg: <ResourcesIcon /> },
-  { link: "/contact", label: "contact", svg: <ContactIcon /> },
+  { link: "/", svg: <HomeIcon /> },
+  { link: "/about", svg: <AboutIcon /> },
+  { link: "/events", svg: <EventsIcon /> },
+  { link: "/resources", svg: <ResourcesIcon /> },
+  { link: "/contact", svg: <ContactIcon /> },
 ];
 
 const Navbar = () => {
   const pathname = usePathname();
-  console.log(pathname);
 
   return (
     <nav className={styles.navbar}>
@@ -31,8 +30,8 @@ const Navbar = () => {
       </Link>
 
       <ul>
-        {navLinks.map(({ link, svg, label }) => {
-          const isActive = pathname.includes(label);
+        {navLinks.map(({ link, svg }) => {
+          const isActive = pathname === link;
 
           return (
             <li key={link}>
@@ -42,35 +41,6 @@ const Navbar = () => {
             </li>
           );
         })}
-        {/* <li>
-          <Link href="/">
-            <HomeIcon />
-          </Link>
-        </li>
-
-        <li>
-          <Link href="/about">
-            <AboutIcon />
-          </Link>
-        </li>
-
-        <li>
-          <Link href="/events">
-            <EventsIcon />
-          </Link>
-        </li>
-
-        <li>
-          <Link href="/resources">
-            <ResourcesIcon />
-          </Link>
-        </li>
-
-        <li>
-          <Link href="/contact">
-            <ContactIcon />
-          </Link>
-        </li> */}
       </ul>
     </nav>
   );

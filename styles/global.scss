@@ -20,42 +20,42 @@
   --acm-secondary-font: "Lato", sans-serif;
 }
 
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//   font-family: $acm-font;
-// }
-// h2 {
-//   font-size: 64px;
-//   line-height: 45px;
-//   font-weight: 600;
-// }
-// h3 {
-//   font-size: 48px;
-//   line-height: 35px;
-//   font-weight: 600;
-// }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--acm-font);
+}
+h2 {
+  font-size: 64px;
+  line-height: 45px;
+  font-weight: 600;
+}
+h3 {
+  font-size: 48px;
+  line-height: 35px;
+  font-weight: 600;
+}
 
-// p,
-// a,
-// button,
-// small {
-//   font-family: $acm-secondary-font;
-// }
+p,
+a,
+button,
+small {
+  font-family: var(--acm-secondary-font);
+}
 
-// a {
-//   color: $acm-blue;
-//   transition: all 0.25s;
-// }
-// a:active {
-//   color: $acm-black;
-// }
-// a:hover {
-//   color: $acm-pink;
-// }
+a {
+  color: var(--acm-blue);
+  transition: all 0.25s;
+}
+a:active {
+  color: var(--acm-black);
+}
+a:hover {
+  color: var(--acm-pink);
+}
 
 // ======== RESETS =========
 * {
@@ -63,10 +63,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .App {
   position: relative;
   min-height: 100vh;
 }
+
 body {
   position: relative;
 }
