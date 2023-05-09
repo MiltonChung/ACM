@@ -1,0 +1,24 @@
+@mixin window-card-circles($color) {
+  background: $color;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  transform: translateY(10%);
+  margin-right: 0.5rem;
+  @media only screen and (max-width: 500px) {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+@mixin svg-placer($top, $bottom, $left, $right) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  z-index: 1;
+  opacity: 0.5;
+  width: 2rem;
+  height: 2rem;
+}

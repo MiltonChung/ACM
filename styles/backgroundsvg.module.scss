@@ -1,0 +1,32 @@
+@import "mixins";
+
+.svg1 {
+  @include svg-placer(5%, unset, 5%, unset);
+}
+.svg2 {
+  @include svg-placer(1%, unset, 15%, unset);
+}
+.svg3 {
+  @include svg-placer(15%, unset, -2%, unset);
+}
+.svg4 {
+  @include svg-placer(20%, unset, unset, 10%);
+}
+.svg5 {
+  @include svg-placer(38%, unset, 5%, unset);
+}
+.svg6 {
+  @include svg-placer(55%, unset, 16%, unset);
+}
+.svg7 {
+  @include svg-placer(unset, 25%, 5%, unset);
+}
+.svg8 {
+  @include svg-placer(unset, 35%, unset, 15%);
+}
+.svg9 {
+  @include svg-placer(unset, 10%, 16%, unset);
+}
+.svg10 {
+  @include svg-placer(unset, 1%, unset, 12%);
+}

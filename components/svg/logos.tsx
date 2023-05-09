@@ -12,9 +12,9 @@ export function LogoDarkIcon({ className = "" }) {
         x2="35.8923"
         y2="1.99999"
         stroke="black"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <line
         x1="36.1213"
@@ -22,9 +22,9 @@ export function LogoDarkIcon({ className = "" }) {
         x2="48.0136"
         y2="13.8923"
         stroke="black"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <circle cx="23.5" cy="14.5" r="2.5" fill="black" />
       <circle cx="48.5" cy="14.5" r="2.5" fill="black" />
@@ -35,9 +35,9 @@ export function LogoDarkIcon({ className = "" }) {
         y2="-1.5"
         transform="matrix(0.707107 0.707107 0.707107 -0.707107 24 57.9864)"
         stroke="black"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <line
         x1="1.5"
@@ -46,9 +46,9 @@ export function LogoDarkIcon({ className = "" }) {
         y2="-1.5"
         transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 34 72)"
         stroke="black"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <circle r="2.5" transform="matrix(1 0 0 -1 23.5 59.5)" fill="black" />
       <circle r="2.5" transform="matrix(1 0 0 -1 48.5 59.5)" fill="black" />
@@ -58,9 +58,9 @@ export function LogoDarkIcon({ className = "" }) {
         x2="70.2297"
         y2="37.1203"
         stroke="#0093D0"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <line
         x1="70.2262"
@@ -68,9 +68,9 @@ export function LogoDarkIcon({ className = "" }) {
         x2="58.1531"
         y2="49.058"
         stroke="#0093D0"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <circle
         cx="57.921"
@@ -93,9 +93,9 @@ export function LogoDarkIcon({ className = "" }) {
         y2="-1.5"
         transform="matrix(-0.696191 0.717857 0.717857 0.696191 15.8587 25.0147)"
         stroke="black"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <line
         x1="1.5"
@@ -104,9 +104,9 @@ export function LogoDarkIcon({ className = "" }) {
         y2="-1.5"
         transform="matrix(0.717857 0.696191 0.696191 -0.717857 2 35.2283)"
         stroke="black"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <circle
         r="2.5"
@@ -140,9 +140,9 @@ export function LogoLightIcon({ className = "" }) {
         x2="41.5042"
         y2="2.99999"
         stroke="#F7F7FF"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <line
         x1="41.2193"
@@ -150,9 +150,9 @@ export function LogoLightIcon({ className = "" }) {
         x2="54.9061"
         y2="16.6869"
         stroke="#F7F7FF"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <circle cx="27.2533" cy="17.1008" r="2.82015" fill="#F7F7FF" />
       <circle cx="55.4549" cy="17.1008" r="2.82015" fill="#F7F7FF" />
@@ -163,9 +163,9 @@ export function LogoLightIcon({ className = "" }) {
         y2="-1.5"
         transform="matrix(0.707107 0.707107 0.707107 -0.707107 27.8174 66.1561)"
         stroke="#F7F7FF"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <line
         x1="1.5"
@@ -174,9 +174,9 @@ export function LogoLightIcon({ className = "" }) {
         y2="-1.5"
         transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 39.098 81.9643)"
         stroke="#F7F7FF"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <circle
         r="2.82015"
@@ -194,9 +194,9 @@ export function LogoLightIcon({ className = "" }) {
         x2="79.9632"
         y2="42.8895"
         stroke="#0093D0"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <line
         x1="79.9675"
@@ -204,9 +204,9 @@ export function LogoLightIcon({ className = "" }) {
         x2="66.0726"
         y2="56.0802"
         stroke="#0093D0"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <circle
         cx="66.0824"
@@ -229,9 +229,9 @@ export function LogoLightIcon({ className = "" }) {
         y2="-1.5"
         transform="matrix(-0.696191 0.717857 0.717857 0.696191 18.6335 28.9621)"
         stroke="#F7F7FF"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <line
         x1="1.5"
@@ -240,9 +240,9 @@ export function LogoLightIcon({ className = "" }) {
         y2="-1.5"
         transform="matrix(0.717857 0.696191 0.696191 -0.717857 3 40.4835)"
         stroke="#F7F7FF"
-        stroke-width="3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <circle
         r="2.82015"
