@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 10rem;
+  padding-bottom: 2rem;
   position: relative;
 
   .landing {
@@ -139,71 +139,61 @@
 
   .windowCardsContainer {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    display: grid;
+    width: 87%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3.5rem;
+    justify-items: center;
+    margin-top: 5rem;
 
-    .window-card {
-      width: 60vw;
-      min-height: 500px;
+    .windowCard {
+      min-height: 27rem;
       height: fit-content;
       background: var(--acm-gray);
-      border-radius: 20px;
+      border-radius: 1rem;
       box-shadow: 2px 4px 7px 0px rgba(0, 0, 0, 0.15);
-      overflow: hidden;
-      margin: 3rem 0;
       z-index: 2;
+      overflow: hidden;
 
-      &-top-menu {
-        height: 65px;
+      .windowCardHeader {
+        height: 3rem;
         background: var(--acm-black);
         display: flex;
         align-items: center;
+        padding-left: 1.5rem;
 
-        padding-left: 1.2rem;
+        div {
+          &:first-child {
+            @include window-card-circles(var(--acm-pink));
+          }
 
-        .red-circle {
-          @include window-card-circles(var(--acm-pink));
-        }
-        .yellow-circle {
-          @include window-card-circles(var(--acm-yellow));
-        }
-        .green-circle {
-          @include window-card-circles(var(--acm-green));
-        }
-        .red-circle:hover,
-        .yellow-circle:hover,
-        .green-circle:hover {
-          opacity: 0.8;
+          &:nth-child(2) {
+            @include window-card-circles(var(--acm-yellow));
+          }
+
+          &:nth-child(3) {
+            @include window-card-circles(var(--acm-green));
+          }
         }
       }
 
-      &-texts {
+      .windowCardContent {
         padding: 1.5rem;
 
-        &-title {
-          margin-bottom: 1.5rem;
-          position: relative;
-          width: fit-content;
-          line-height: 50px;
-
-          img {
-            position: absolute;
-            right: -20px;
-            bottom: -18px;
-          }
+        h3 {
+          font-size: var(--font-3xl);
+          font-weight: var(--font-bold);
+          margin-bottom: 0.5rem;
         }
 
-        &-body {
-          font-size: 24px;
-          font-weight: 400;
+        p {
+          font-size: var(--font-xl);
+          font-weight: var(--font-regular);
           line-height: 35px;
         }
       }
 
-      &-button {
+      .windowCardButton {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -212,114 +202,84 @@
 
         a {
           background: var(--acm-black);
-          font-size: 33px;
-          font-weight: 400;
+          font-size: var(--font-2xl);
+          font-weight: var(--font-medium);
           color: var(--acm-white);
           padding: 0.5rem 3rem;
           border: 3px var(--acm-black) solid;
-          transition: all 0.5s;
+          transition: all 0.3s;
           text-decoration: none;
           box-shadow: 3px 3px 7px rgba(7, 6, 0, 0.25);
-        }
-        a:hover {
-          color: var(--acm-black);
-          background: var(--acm-gray);
-        }
-      }
+          border-radius: 50rem;
+          margin: 0.5rem 0;
 
-      @media only screen and (max-width: 768px) {
-        width: 88%;
+          &:hover {
+            background: transparent;
+            color: var(--acm-black);
+          }
+        }
       }
-      @media only screen and (max-width: 500px) {
-        width: 93%;
+    }
+
+    @media (max-width: 890px) {
+      width: 95%;
+
+      .windowCard .windowCardContent {
+        padding: 1.25rem;
+
+        h3 {
+          font-size: var(--font-2xl);
+          margin-bottom: 0.25rem;
+        }
+
+        p {
+          font-size: var(--font-lg);
+          line-height: 30px;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+      width: 90%;
+
+      .windowCard {
+        height: fit-content;
         min-height: fit-content;
-        height: fit-content;
+      }
+    }
 
-        &-top-menu {
-          height: 40px;
-          padding-left: 1.4rem;
+    @media (max-width: 500px) {
+      width: 93%;
+
+      .windowCard {
+        .windowCardHeader {
+          height: 2.5rem;
+          padding-left: 1rem;
         }
 
-        &-texts {
-          padding: 1.5rem 1.1rem;
+        .windowCardContent {
+          padding: 0.5rem 1rem 1rem 1rem;
 
-          &-title {
-            font-size: 45px;
-            margin-bottom: 1rem;
-            img {
-              right: 0px;
-            }
+          h3 {
+            font-size: var(--font-xl);
+            margin-bottom: 0.25rem;
           }
 
-          &-body {
-            font-size: 18px;
-            line-height: 28px;
+          p {
+            font-size: var(--font-base);
+            line-height: 25px;
           }
         }
 
-        &-button {
-          margin-top: 0rem;
-          margin-bottom: 1.5rem;
-
+        .windowCardButton {
           a {
-            font-size: 24px;
+            font-size: var(--font-lg);
             padding: 0.5rem 2rem;
-            border: 2px var(--acm-black) solid;
-            transition: all 0.5s;
+            margin: 0.25rem 0;
           }
         }
       }
     }
-  }
-}
-
-.rec-carousel-wrapper {
-  width: 90% !important;
-  margin: 0 auto;
-
-  .rec.rec-slider-container {
-    width: 80%;
-    margin: 0 auto;
-    .rec-slider {
-      height: fit-content;
-      .rec-swipable {
-        height: fit-content;
-        .rec-carousel-item {
-          height: fit-content;
-        }
-      }
-    }
-  }
-
-  .rec.rec-arrow {
-    border-radius: 50%;
-    background: var(--acm-blue);
-    border: none;
-    box-shadow: none;
-    min-width: 20px;
-    color: var(--acm-white);
-  }
-  .rec.rec-arrow:hover:not(:disabled) {
-    background: var(--acm-pink);
-    border: none;
-    box-shadow: none;
-    color: var(--acm-white);
-  }
-  .rec.rec-arrow:disabled {
-    background: #0092d062;
-    border: none;
-    box-shadow: none;
-    color: var(--acm-white);
-  }
-  .rec.rec-arrow:focus {
-    background: var(--acm-blue);
-    border: none;
-    box-shadow: none;
-    color: var(--acm-white);
-  }
-
-  .rec-dot.rec.rec-dot_active {
-    background-color: var(--acm-blue);
-    box-shadow: 0 0 1px 3px rgba(0, 39, 83, 0.884);
   }
 }
