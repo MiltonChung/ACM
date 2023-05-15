@@ -1,6 +1,8 @@
 import BackgroundSVG from "@/components/BackgroundSvg";
+import BoardMemberBubble from "@/components/BoardMemberBubble";
 import { BlackUsbIcon, PinkUsbIcon } from "@/components/svg/icons";
 import styles from "@/styles/about.module.scss";
+import acm from "../../public/acm.png";
 
 export default function AboutPage() {
   return (
@@ -44,6 +46,62 @@ export default function AboutPage() {
         <h3>
           Meet the <span>board</span>
         </h3>
+
+        <BoardMemberBubble
+          name="Milton Chung"
+          avatarLocation="left"
+          id={223}
+          title="President"
+          avatarImg={acm}
+          message="Hey everyone! My name is Harish and I'm the Instructional Lead
+          for ACM this year! I'm currently a proposed Computer Engineering
+          student and some things I like to do outside of academia are PC
+          gaming, hiking across campus and spending time in coffee shops
+          downtown. I'm really excited to meet you all and create a
+          supporting community so we can all excel together in our CS endeavors!"
+        />
+
+        <BoardMemberBubble
+          name="Milton Chung"
+          avatarLocation="right"
+          id={2232}
+          title="President"
+          avatarImg={acm}
+          message="Hey everyone! My name is Harish and I'm the Instructional Lead
+          for ACM this year! I'm currently a proposed Computer Engineering
+          student and some things I like to do outside of academia are PC
+          gaming, hiking across campus and spending time in coffee shops
+          downtown. I'm really excited to meet you all and create a
+          supporting community so we can all excel together in our CS endeavors!"
+        />
+
+        <BoardMemberBubble
+          name="Milton Chung"
+          avatarLocation="left"
+          id={223}
+          title="President"
+          avatarImg={acm}
+          message="Hey everyone! My name is Harish and I'm the Instructional Lead
+          for ACM this year! I'm currently a proposed Computer Engineering
+          student and some things I like to do outside of academia are PC
+          gaming, hiking across campus and spending time in coffee shops
+          downtown. I'm really excited to meet you all and create a
+          supporting community so we can all excel together in our CS endeavors!"
+        />
+
+        <BoardMemberBubble
+          name="Milton Chung"
+          avatarLocation="right"
+          id={2232}
+          title="President"
+          avatarImg={acm}
+          message="Hey everyone! My name is Harish and I'm the Instructional Lead
+          for ACM this year! I'm currently a proposed Computer Engineering
+          student and some things I like to do outside of academia are PC
+          gaming, hiking across campus and spending time in coffee shops
+          downtown. I'm really excited to meet you all and create a
+          supporting community so we can all excel together in our CS endeavors!"
+        />
       </div>
     </div>
   );
