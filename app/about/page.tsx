@@ -1,8 +1,8 @@
+import acm from "../../public/acm.png";
+import styles from "@/styles/about.module.scss";
 import BackgroundSVG from "@/components/BackgroundSvg";
 import BoardMemberBubble from "@/components/BoardMemberBubble";
 import { BlackUsbIcon, PinkUsbIcon } from "@/components/svg/icons";
-import styles from "@/styles/about.module.scss";
-import acm from "../../public/acm.png";
 
 export default function AboutPage() {
   return (
