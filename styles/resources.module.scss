@@ -1,0 +1,31 @@
+.resourcesContainer {
+  min-height: calc(100% - 218px);
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  z-index: 3;
+
+  h1 {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: var(--font-4xl);
+    font-weight: var(--font-bold);
+
+    span {
+      color: var(--acm-blue);
+      font-family: inherit;
+    }
+  }
+
+  h2 {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: var(--font-2xl);
+    font-weight: var(--font-bold);
+
+    span {
+      color: var(--acm-blue);
+      font-family: inherit;
+    }
+  }
+}

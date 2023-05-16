@@ -1,7 +1,7 @@
+import styles from "@/styles/contact.module.scss";
 import BackgroundSVG from "@/components/BackgroundSvg";
 import { ExternalLinkIcon, WebIcon } from "@/components/svg/icons";
 import { DiscordIcon, InstagramIcon } from "@/components/svg/logos";
-import styles from "@/styles/contact.module.scss";
 
 export default function ContactPage() {
   return (
