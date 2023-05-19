@@ -12,7 +12,7 @@ export default function ResourcesPage() {
 
       <div className={styles.resourcesContent}>
         <h2>
-          💪 <span>Surviving CS</span> at UCSC 💪
+          💪 <span>Surviving CS</span> at UCSC
         </h2>
         <div className={styles.resourcesSection}>
           <h3>Meeting Slides</h3>
@@ -100,7 +100,7 @@ export default function ResourcesPage() {
 
       <div className={styles.resourcesContent}>
         <h2>
-          😎 Getting that <span>dream</span> internship or job 😎
+          😎 Getting that <span>dream</span> internship or job
         </h2>
 
         <div className={styles.resourcesSection}>
@@ -383,11 +383,11 @@ export default function ResourcesPage() {
             </li>
           </ul>
         </div>
-
-        <h2>
-          🎉<span>Congratulations!</span> You got the job 🎉
-        </h2>
       </div>
+
+      <h1>
+        🎉<span>Congratulations!</span> You got the job 🎉
+      </h1>
     </div>
   );
 }
