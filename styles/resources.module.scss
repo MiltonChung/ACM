@@ -1,15 +1,17 @@
 .resourcesContainer {
   min-height: calc(100% - 218px);
-  position: relative;
-  width: 90%;
   margin: 0 auto;
+  position: relative;
   z-index: 3;
 
   h1 {
     margin-top: 2rem;
+    margin-bottom: 4rem;
     text-align: center;
     font-size: var(--font-4xl);
     font-weight: var(--font-bold);
+    position: relative;
+    z-index: 3;
 
     span {
       color: var(--acm-blue);
@@ -19,13 +21,57 @@
 
   h2 {
     margin-top: 2rem;
-    text-align: center;
+    margin-bottom: -1rem;
     font-size: var(--font-2xl);
     font-weight: var(--font-bold);
+    position: relative;
+    z-index: 3;
 
     span {
       color: var(--acm-blue);
       font-family: inherit;
+    }
+  }
+
+  .resourcesContent {
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    width: 65%;
+
+    .resourcesSection {
+      margin-bottom: 1.5rem;
+      margin-top: 2rem;
+      position: relative;
+      z-index: 3;
+
+      h3 {
+        font-size: var(--font-xl);
+        font-weight: var(--font-bold);
+        margin-bottom: 0.25rem;
+      }
+
+      p,
+      a {
+        font-size: var(--font-md);
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        margin-left: 0.5rem;
+      }
+
+      .indent {
+        margin: 0 0 1rem 4rem;
+
+        li {
+          margin-bottom: 0.4rem;
+
+          a,
+          p {
+            margin-left: 0;
+          }
+        }
+      }
     }
   }
 }
