@@ -9,7 +9,7 @@ export default function AboutPage() {
     <div className={styles.about}>
       <BackgroundSVG />
 
-      <div className={styles.aboutBody}>
+      <div className={styles.aboutContent}>
         <h2>
           Our <span>mission</span> statement
         </h2>
