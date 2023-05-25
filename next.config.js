@@ -4,6 +4,15 @@ const path = require("path");
 module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
-    // prependData: `@import "global.scss";`,
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+        port: "",
+        pathname: "/images/**",
+      },
+    ],
   },
 };

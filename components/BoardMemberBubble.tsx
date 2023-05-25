@@ -2,13 +2,15 @@ import { classNames } from "@/lib";
 import { FComponent } from "@/lib/types/commons";
 import Image, { StaticImageData } from "next/image";
 import styles from "@/styles/boardMemberBubble.module.scss";
+import { PortableTextBlock } from "sanity";
+import { PortableText } from "@portabletext/react";
 
 type BoardMemberBubbleProps = {
   name: string;
   title: string;
   avatarImg: string | StaticImageData;
-  message: string;
-  id: number;
+  message: PortableTextBlock[];
+  id: number | string;
   avatarLocation: "left" | "right";
 };
 
@@ -30,6 +32,8 @@ const BoardMemberBubble: FComponent<BoardMemberBubbleProps> = ({
     >
       {avatarLocation === "left" ? (
         <Image
+          width={130}
+          height={130}
           className={classNames(styles.avatar, styles.left)}
           src={avatarImg}
           alt={name}
@@ -46,12 +50,14 @@ const BoardMemberBubble: FComponent<BoardMemberBubbleProps> = ({
             avatarLocation === "left" ? styles.left : styles.right
           )}
         >
-          {message}
+          <PortableText value={message} />
         </div>
       </div>
 
       {avatarLocation === "right" ? (
         <Image
+          width={130}
+          height={130}
           className={classNames(styles.avatar, styles.right)}
           src={avatarImg}
           alt={name}
