@@ -1,9 +1,23 @@
+import { capitalizeFirstLetter } from "@/lib";
 import styles from "@/styles/contact.module.scss";
+import { SocialMedia } from "@/types/SocialMedia";
 import BackgroundSVG from "@/components/BackgroundSvg";
+import { getSocialMedias } from "@/sanity/sanity-utls";
 import { ExternalLinkIcon, WebIcon } from "@/components/svg/icons";
-import { DiscordIcon, InstagramIcon } from "@/components/svg/logos";
+import {
+  DiscordIcon,
+  FacebookIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  RedditIcon,
+  SnapchapIcon,
+  TwitterIcon,
+  YoutubeIcon,
+} from "@/components/svg/logos";
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const socialMedias = await getSocialMedias();
+
   return (
     <div className={styles.contactContainer}>
       <BackgroundSVG />
@@ -14,41 +28,47 @@ export default function ContactPage() {
         </h2>
 
         <div className={styles.socialContainer}>
-          <a
-            href="https://linktr.ee/ucscacm"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <WebIcon />
-            <span>
-              Linktree
-              <ExternalLinkIcon />
-            </span>
-          </a>
+          {socialMedias.map(({ socialMedia, _id: id, link }, index) => {
+            const Icon = socialMediaIconMap[socialMedia];
 
-          <a
-            href="https://www.instagram.com/ucscacm/?hl=en"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <InstagramIcon />
-            <span>
-              Instagram <ExternalLinkIcon />
-            </span>
-          </a>
-
-          <a
-            href="https://discord.gg/zxexESCz8N"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <DiscordIcon />
-            <span>
-              Discord <ExternalLinkIcon />
-            </span>
-          </a>
+            return (
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={id}
+                style={{
+                  color: assignColorFromPosition(index),
+                }}
+              >
+                {Icon}
+                <span>
+                  {capitalizeFirstLetter(socialMedia)} <ExternalLinkIcon />
+                </span>
+              </a>
+            );
+          })}
         </div>
       </div>
     </div>
   );
 }
+
+const socialMediaIconMap: Record<SocialMedia["socialMedia"], JSX.Element> = {
+  instagram: <InstagramIcon />,
+  discord: <DiscordIcon />,
+  linktree: <WebIcon />,
+  linkedin: <LinkedinIcon />,
+  facebook: <FacebookIcon />,
+  twitter: <TwitterIcon />,
+  youtube: <YoutubeIcon />,
+  twitch: <TwitterIcon />,
+  snapchat: <SnapchapIcon />,
+  reddit: <RedditIcon />,
+  other: <WebIcon />,
+};
+
+const assignColorFromPosition = (position: number) => {
+  const colors = ["#ffbb43", "#0093d0", "#ea526f"];
+  return colors[position % colors.length];
+};

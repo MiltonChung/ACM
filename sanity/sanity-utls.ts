@@ -3,6 +3,7 @@ import { client } from "./lib/client";
 import { Resource } from "@/types/Resrouce";
 import { BoardMember } from "@/types/BoardMember";
 import { HomepageWindow } from "@/types/HomepageWindow";
+import { SocialMedia } from "@/types/SocialMedia";
 
 export async function getBoardMembers(): Promise<BoardMember[]> {
   return client.fetch(
@@ -40,6 +41,18 @@ export async function getResources(): Promise<Resource[]> {
       title,
       orderID,
       description
+    }`
+  );
+}
+
+export async function getSocialMedias(): Promise<SocialMedia[]> {
+  return client.fetch(
+    groq`*[_type == "socialMedia"] | order(orderID asc) {
+      _id,
+      _createdAt,
+      orderID,
+      socialMedia,
+      link
     }`
   );
 }

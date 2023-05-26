@@ -18,7 +18,7 @@ const Resources = {
       title: "Title",
       type: "array",
       description:
-        "If you want certain words to be blue, bold them. Only use Heading 2.",
+        "If you want certain words/letters to be blue, bold them and only use Heading 2.",
       of: [
         {
           type: "block",
