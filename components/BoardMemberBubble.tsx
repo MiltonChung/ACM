@@ -1,10 +1,10 @@
-import { classNames } from "@/lib";
-import { FComponent } from "@/lib/types/commons";
 import Image from "next/image";
-import styles from "@/styles/boardMemberBubble.module.scss";
-import { PortableText } from "@portabletext/react";
-import { BoardMember } from "@/types/BoardMember";
+import { classNames } from "@/lib";
 import acm from "@/public/acm.png";
+import { FComponent } from "@/types/commons";
+import { BoardMember } from "@/types/BoardMember";
+import { PortableText } from "@portabletext/react";
+import styles from "@/styles/boardMemberBubble.module.scss";
 
 type BoardMemberBubbleProps = {
   boardMembers: BoardMember[];

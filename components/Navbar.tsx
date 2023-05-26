@@ -1,9 +1,9 @@
 "use client";
-
 import Link from "next/link";
 import { LogoDarkIcon } from "./svg/logos";
 import { usePathname } from "next/navigation";
 import styles from "../styles/navbar.module.scss";
+
 import {
   HomeIcon,
   AboutIcon,

@@ -1,8 +1,8 @@
 import * as React from "react";
+import { FComponent } from "@/types/commons";
 import styles from "../styles/home.module.scss";
-import { FComponent } from "@/lib/types/commons";
-import { HomepageWindow } from "@/types/HomepageWindow";
 import { PortableText } from "@portabletext/react";
+import { HomepageWindow } from "@/types/HomepageWindow";
 
 type WindowCardsProps = {
   windowCards: HomepageWindow[];

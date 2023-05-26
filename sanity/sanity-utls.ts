@@ -2,8 +2,8 @@ import { groq } from "next-sanity";
 import { client } from "./lib/client";
 import { Resource } from "@/types/Resrouce";
 import { BoardMember } from "@/types/BoardMember";
-import { HomepageWindow } from "@/types/HomepageWindow";
 import { SocialMedia } from "@/types/SocialMedia";
+import { HomepageWindow } from "@/types/HomepageWindow";
 
 export async function getBoardMembers(): Promise<BoardMember[]> {
   return client.fetch(
