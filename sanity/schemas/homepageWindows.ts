@@ -28,7 +28,11 @@ const homepageWindows = {
       title: "Description",
       type: "array",
       description: "Content of the window.",
-      of: [{ type: "block" }],
+      of: [
+        {
+          type: "block",
+        },
+      ],
       validation: (Rule: Rule) => [Rule.required().error("Required")],
     },
     {

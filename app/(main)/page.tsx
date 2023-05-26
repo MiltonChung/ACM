@@ -1,4 +1,4 @@
-import styles from "../styles/home.module.scss";
+import styles from "@/styles/home.module.scss";
 import BackgroundSVG from "@/components/BackgroundSvg";
 import { WindowCards } from "@/components/WindowCards";
 import { LogoLightIcon } from "@/components/svg/logos";

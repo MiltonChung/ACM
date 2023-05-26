@@ -1,4 +1,3 @@
-import acm from "../../public/acm.png";
 import styles from "@/styles/about.module.scss";
 import BackgroundSVG from "@/components/BackgroundSvg";
 import { getBoardMembers } from "@/sanity/sanity-utls";
@@ -50,19 +49,7 @@ export default async function AboutPage() {
           Meet the <span>board</span>
         </h3>
 
-        {boardMembers.map((boardMember, index) => {
-          return (
-            <BoardMemberBubble
-              name={boardMember.name}
-              avatarLocation={index % 2 === 0 ? "left" : "right"}
-              id={boardMember._id}
-              key={boardMember._id}
-              title={boardMember.position}
-              avatarImg={boardMember.profilePic || acm}
-              message={boardMember.description}
-            />
-          );
-        })}
+        <BoardMemberBubble boardMembers={boardMembers} />
       </div>
     </div>
   );

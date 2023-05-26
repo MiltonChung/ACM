@@ -1,69 +1,71 @@
 import { classNames } from "@/lib";
 import { FComponent } from "@/lib/types/commons";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import styles from "@/styles/boardMemberBubble.module.scss";
-import { PortableTextBlock } from "sanity";
 import { PortableText } from "@portabletext/react";
+import { BoardMember } from "@/types/BoardMember";
+import acm from "@/public/acm.png";
 
 type BoardMemberBubbleProps = {
-  name: string;
-  title: string;
-  avatarImg: string | StaticImageData;
-  message: PortableTextBlock[];
-  id: number | string;
-  avatarLocation: "left" | "right";
+  boardMembers: BoardMember[];
 };
 
 const BoardMemberBubble: FComponent<BoardMemberBubbleProps> = ({
-  name,
-  title,
-  avatarImg,
-  message,
-  id,
-  avatarLocation,
+  boardMembers,
 }) => {
   return (
-    <div
-      className={classNames(
-        styles.boardMemberContainer,
-        avatarLocation === "left" ? styles.left : styles.right
+    <>
+      {boardMembers.map(
+        ({ _id: id, name, description, position, profilePic }, index) => {
+          const avatarLocation = index % 2 === 0 ? "left" : "right";
+          const avatarImg = profilePic || acm;
+
+          return (
+            <div
+              className={classNames(
+                styles.boardMemberContainer,
+                avatarLocation === "left" ? styles.left : styles.right
+              )}
+              key={id}
+            >
+              {avatarLocation === "left" ? (
+                <Image
+                  width={130}
+                  height={130}
+                  className={classNames(styles.avatar, styles.left)}
+                  src={avatarImg}
+                  alt={name}
+                />
+              ) : null}
+
+              <div className={styles.memberContent}>
+                <h4>
+                  {name}, {position}
+                </h4>
+                <div
+                  className={classNames(
+                    styles.bubble,
+                    avatarLocation === "left" ? styles.left : styles.right
+                  )}
+                >
+                  <PortableText value={description} />
+                </div>
+              </div>
+
+              {avatarLocation === "right" ? (
+                <Image
+                  width={130}
+                  height={130}
+                  className={classNames(styles.avatar, styles.right)}
+                  src={avatarImg}
+                  alt={name}
+                />
+              ) : null}
+            </div>
+          );
+        }
       )}
-      key={id}
-    >
-      {avatarLocation === "left" ? (
-        <Image
-          width={130}
-          height={130}
-          className={classNames(styles.avatar, styles.left)}
-          src={avatarImg}
-          alt={name}
-        />
-      ) : null}
-
-      <div className={styles.memberContent}>
-        <h4>
-          {name}, {title}
-        </h4>
-        <div
-          className={classNames(
-            styles.bubble,
-            avatarLocation === "left" ? styles.left : styles.right
-          )}
-        >
-          <PortableText value={message} />
-        </div>
-      </div>
-
-      {avatarLocation === "right" ? (
-        <Image
-          width={130}
-          height={130}
-          className={classNames(styles.avatar, styles.right)}
-          src={avatarImg}
-          alt={name}
-        />
-      ) : null}
-    </div>
+    </>
   );
 };
 
