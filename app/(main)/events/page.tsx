@@ -17,9 +17,9 @@ export default function EventsPage() {
       <BackgroundSVG />
 
       <div className={styles.eventsContent}>
-        <h2>
+        <h1>
           Don&apos;t miss out! Stay <span>updated</span> here
-        </h2>
+        </h1>
 
         <div className={styles.calendar}>
           <div

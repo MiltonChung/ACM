@@ -44,14 +44,59 @@ h4,
 h5,
 h6 {
   font-family: var(--font-oswald);
+  position: relative;
+  z-index: 3;
+}
+
+h1 {
+  font-size: var(--font-4xl);
+  font-weight: var(--font-bold);
+  text-align: center;
+
+  strong,
+  span {
+    color: var(--acm-blue);
+    font-family: inherit;
+  }
+
+  @media (max-width: 768px) {
+    font-size: var(--font-3xl);
+  }
+
+  @media (max-width: 570px) {
+    font-size: var(--font-2xl);
+  }
+}
+
+h2 {
+  font-size: var(--font-3xl);
+  font-weight: var(--font-bold);
+  text-align: center;
+
+  strong,
+  span {
+    color: var(--acm-blue);
+    font-family: inherit;
+  }
+
+  @media (max-width: 768px) {
+    font-size: var(--font-2xl);
+  }
+
+  @media (max-width: 570px) {
+    font-size: var(--font-xl);
+  }
 }
 
 p,
 a,
 button,
 small,
-span {
+span,
+li {
   font-family: var(--font-secondary-lato);
+  position: relative;
+  z-index: 3;
 }
 
 a {

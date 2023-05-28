@@ -23,9 +23,9 @@ export default async function ContactPage() {
       <BackgroundSVG />
 
       <div className={styles.contactContent}>
-        <h2>
+        <h1>
           Stay in <span>touch!</span>
-        </h2>
+        </h1>
 
         <div className={styles.socialContainer}>
           {socialMedias.map(({ socialMedia, _id: id, link }, index) => {

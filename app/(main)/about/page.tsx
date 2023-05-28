@@ -12,9 +12,9 @@ export default async function AboutPage() {
       <BackgroundSVG />
 
       <div className={styles.aboutContent}>
-        <h2>
+        <h1>
           Our <span>mission</span> statement
-        </h2>
+        </h1>
 
         <div className={styles.bubbleContainer}>
           <BlackUsbIcon />
@@ -29,9 +29,9 @@ export default async function AboutPage() {
           </div>
         </div>
 
-        <h3>
+        <h2>
           I&apos;m interested! How do I get <span>involved</span>?
-        </h3>
+        </h2>
 
         <div className={styles.bubbleContainer}>
           <div className={styles.bubble}>
@@ -45,9 +45,9 @@ export default async function AboutPage() {
           <PinkUsbIcon />
         </div>
 
-        <h3>
+        <h2>
           Meet the <span>board</span>
-        </h3>
+        </h2>
 
         <BoardMemberBubble boardMembers={boardMembers} />
       </div>
