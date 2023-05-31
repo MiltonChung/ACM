@@ -8,7 +8,7 @@
   position: relative;
 
   img.avatar {
-    border: black solid 2px;
+    border: var(--acm-black) solid 2px;
     vertical-align: middle;
     width: 130px;
     height: 130px;
@@ -43,7 +43,6 @@
       line-height: 30px;
       font-size: var(--font-lg);
       width: 100%;
-      max-width: 800px;
       border-radius: 1rem;
       padding: 1.4rem;
       text-align: left;
