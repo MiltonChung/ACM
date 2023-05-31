@@ -1,6 +1,6 @@
 "use client";
+import * as React from "react";
 import styles from "@/styles/events.module.scss";
-import BackgroundSVG from "@/components/BackgroundSvg";
 import { RightArrowIcon } from "@/components/svg/icons";
 
 export default function EventsPage() {
@@ -14,13 +14,10 @@ export default function EventsPage() {
 
   return (
     <div className={styles.eventsContainer}>
-      <BackgroundSVG />
-
       <div className={styles.eventsContent}>
         <h1>
           Don&apos;t miss out! Stay <span>updated</span> here
         </h1>
-
         <div className={styles.calendar}>
           <div
             className={styles.hintForScroll}
@@ -34,6 +31,7 @@ export default function EventsPage() {
               Scroll <RightArrowIcon /> for more
             </p>
           </div>
+
           <iframe src="https://calendar.google.com/calendar/u/0/embed?src=c_1d01dcebf8b83f84aa2586d9509f3b58f36a7dc2e842c69bdc2ecf475c93281e@group.calendar.google.com&ctz=America/Los_Angeles" />
         </div>
       </div>
