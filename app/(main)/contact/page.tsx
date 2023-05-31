@@ -20,7 +20,7 @@ export default async function ContactPage() {
 
   return (
     <div className={styles.contactContainer}>
-      <BackgroundSVG />
+      <BackgroundSVG numOfIcons={8} />
 
       <div className={styles.contactContent}>
         <h1>
