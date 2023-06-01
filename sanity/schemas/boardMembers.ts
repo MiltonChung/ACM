@@ -36,7 +36,44 @@ const boardMembers = {
       title: "Description",
       type: "array",
       description: "A short description of the board member.",
-      of: [{ type: "block" }],
+      of: [
+        {
+          type: "block",
+          styles: [
+            {
+              title: "Normal",
+              value: "normal",
+            },
+          ],
+          lists: [],
+          marks: {
+            decorators: [
+              { title: "Bold", value: "strong" },
+              { title: "Italicize", value: "em" },
+            ],
+            annotations: [
+              {
+                name: "link",
+                type: "object",
+                title: "External link",
+                fields: [
+                  {
+                    name: "href",
+                    type: "url",
+                    title: "URL",
+                  },
+                  {
+                    title: "Open in new tab",
+                    name: "blank",
+                    type: "boolean",
+                    default: true,
+                  },
+                ],
+              },
+            ],
+          },
+        },
+      ],
       validation: (Rule: Rule) => [Rule.required().error("Required")],
     },
   ],
