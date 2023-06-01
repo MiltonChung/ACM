@@ -13,11 +13,11 @@ import {
 } from "./svg/icons";
 
 const navLinks = [
-  { link: "/", svg: <HomeIcon /> },
-  { link: "/about", svg: <AboutIcon /> },
-  { link: "/events", svg: <EventsIcon /> },
-  { link: "/resources", svg: <ResourcesIcon /> },
-  { link: "/contact", svg: <ContactIcon /> },
+  { link: "/", svg: <HomeIcon />, title: "Home" },
+  { link: "/about", svg: <AboutIcon />, title: "About" },
+  { link: "/events", svg: <EventsIcon />, title: "Events" },
+  { link: "/resources", svg: <ResourcesIcon />, title: "Resources" },
+  { link: "/contact", svg: <ContactIcon />, title: "Contact" },
 ];
 
 const Navbar = () => {
@@ -25,17 +25,21 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <Link href="/" className={styles.navLogo}>
+      <Link title="Home" href="/" className={styles.navLogo}>
         <LogoDarkIcon />
       </Link>
 
       <ul>
-        {navLinks.map(({ link, svg }) => {
+        {navLinks.map(({ link, svg, title }) => {
           const isActive = pathname === link;
 
           return (
             <li key={link}>
-              <Link href={link} className={isActive ? styles.selected : ""}>
+              <Link
+                title={title}
+                href={link}
+                className={isActive ? styles.selected : ""}
+              >
                 {svg}
               </Link>
             </li>

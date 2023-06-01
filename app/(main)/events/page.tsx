@@ -13,7 +13,7 @@ export default function EventsPage() {
   };
 
   return (
-    <div className={styles.eventsContainer}>
+    <main className={styles.eventsContainer}>
       <div className={styles.eventsContent}>
         <h1>
           Don&apos;t miss out! Stay <span>updated</span> here
@@ -32,9 +32,12 @@ export default function EventsPage() {
             </p>
           </div>
 
-          <iframe src="https://calendar.google.com/calendar/u/0/embed?src=c_1d01dcebf8b83f84aa2586d9509f3b58f36a7dc2e842c69bdc2ecf475c93281e@group.calendar.google.com&ctz=America/Los_Angeles" />
+          <iframe
+            title="ACM google calendar"
+            src="https://calendar.google.com/calendar/u/0/embed?src=c_1d01dcebf8b83f84aa2586d9509f3b58f36a7dc2e842c69bdc2ecf475c93281e@group.calendar.google.com&ctz=America/Los_Angeles"
+          />
         </div>
       </div>
-    </div>
+    </main>
   );
 }

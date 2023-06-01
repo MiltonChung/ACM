@@ -8,7 +8,7 @@ export default async function AboutPage() {
   const boardMembers = await getBoardMembers();
 
   return (
-    <div className={styles.about}>
+    <main className={styles.about}>
       <BackgroundSVG />
 
       <div className={styles.aboutContent}>
@@ -51,6 +51,6 @@ export default async function AboutPage() {
 
         <BoardMemberBubble boardMembers={boardMembers} />
       </div>
-    </div>
+    </main>
   );
 }

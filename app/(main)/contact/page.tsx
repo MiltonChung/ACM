@@ -19,7 +19,7 @@ export default async function ContactPage() {
   const socialMedias = await getSocialMedias();
 
   return (
-    <div className={styles.contactContainer}>
+    <main className={styles.contactContainer}>
       <BackgroundSVG numOfIcons={8} />
 
       <div className={styles.contactContent}>
@@ -50,7 +50,7 @@ export default async function ContactPage() {
           })}
         </div>
       </div>
-    </div>
+    </main>
   );
 }
 

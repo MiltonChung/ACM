@@ -14,6 +14,7 @@ const Footer = () => {
           href="https://github.com/MiltonChung"
           target="_blank"
           rel="noopener noreferrer"
+          title="Milton Chung's Github"
         >
           <GithubIcon />
         </a>
@@ -23,6 +24,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
           className={styles.linkedin}
+          title="Milton Chung's Linkedin"
         >
           <LinkedinIcon />
         </a>
@@ -31,6 +33,7 @@ const Footer = () => {
           href="https://miltonchung.com/"
           target="_blank"
           rel="noopener noreferrer"
+          title="Milton Chung's Website"
         >
           <WebIcon />
         </a>

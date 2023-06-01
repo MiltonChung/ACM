@@ -21,13 +21,18 @@ const WindowCards: FComponent<WindowCardsProps> = ({ windowCards }) => {
             </div>
 
             <div className={styles.windowCardContent}>
-              <h3>{title}</h3>
+              <h2>{title}</h2>
               <PortableText value={description} />
             </div>
 
             {buttonLink && buttonText ? (
               <div className={styles.windowCardButton}>
-                <a href={buttonLink} target="_blank" rel="noopener noreferrer">
+                <a
+                  title={`Learn more about ${title}`}
+                  href={buttonLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {buttonText}
                 </a>
               </div>

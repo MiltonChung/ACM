@@ -181,10 +181,11 @@
       .windowCardContent {
         padding: 1.5rem;
 
-        h3 {
+        h2 {
           font-size: var(--font-3xl);
           font-weight: var(--font-bold);
           margin-bottom: 0.5rem;
+          text-align: left;
         }
 
         p {

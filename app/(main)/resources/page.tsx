@@ -22,7 +22,7 @@ export default async function ResourcesPage() {
   const resources = await getResources();
 
   return (
-    <div className={styles.resourcesContainer}>
+    <main className={styles.resourcesContainer}>
       <BackgroundSVG />
 
       <h1>
@@ -43,6 +43,6 @@ export default async function ResourcesPage() {
       <h1>
         🎉<span>Congratulations!</span> You got the job 🎉
       </h1>
-    </div>
+    </main>
   );
 }
