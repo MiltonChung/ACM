@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Oswald:wght@300;400;500;600;700&display=swap");
+@import "resets.scss";
 
 // ========= COLORS =========
 :root {
@@ -8,6 +9,8 @@
   --acm-white: #f7f7ff;
   --acm-blue: #0093d0;
   --acm-yellow: #ffbb43;
+
+  --acm-link: #007eb3;
 
   // Extra/Accent Colors
   --acm-gray: #ececf6;
@@ -100,7 +103,7 @@ li {
 }
 
 a {
-  color: var(--acm-blue);
+  color: var(--acm-link);
   transition: all 0.25s;
 }
 a:active {
@@ -108,18 +111,4 @@ a:active {
 }
 a:hover {
   color: var(--acm-pink);
-}
-
-// ======== RESETS =========
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body,
-html {
-  font-size: var(--font-base);
-  position: relative;
-  height: 100%;
 }
