@@ -192,6 +192,14 @@
           font-size: var(--font-xl);
           font-weight: var(--font-regular);
           line-height: 35px;
+
+          a {
+            color: #006996;
+
+            &:hover {
+              color: var(--acm-pink);
+            }
+          }
         }
       }
 
