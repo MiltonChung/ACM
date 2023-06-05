@@ -36,6 +36,10 @@
       font-weight: var(--font-regular);
       margin-left: 2rem;
       width: fit-content;
+      height: 54px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
 
     .bubble {
@@ -124,7 +128,8 @@
 
     .memberContent {
       h4 {
-        margin: -2rem 0 2.3rem 5.5rem;
+        margin: -2.5rem 0 1.25rem 5.5rem;
+        justify-content: center;
       }
 
       .bubble {
@@ -144,11 +149,16 @@
     img.avatar {
       width: 60px;
       height: 60px;
+
+      &.right,
+      &.left {
+        margin: 0 0 -0.4rem 0;
+      }
     }
 
     .memberContent {
       h4 {
-        margin: -1.5rem 0 1.6rem 4.2rem;
+        margin: -3.25rem 0 16px 4.2rem;
         font-size: var(--font-md);
       }
       .bubble {

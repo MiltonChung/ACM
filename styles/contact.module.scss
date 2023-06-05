@@ -3,11 +3,11 @@
   flex-direction: row;
   justify-content: center;
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 3rem auto;
   position: relative;
   z-index: 3;
   max-width: 1700px;
-  min-height: calc(100% - 205px);
+  min-height: calc(100% - 220px);
 
   .contactContent {
     width: 90%;
