@@ -131,8 +131,6 @@ body {
   height: 100%;
   font-size: var(--font-base);
   position: relative;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 body {
@@ -143,7 +141,9 @@ body {
   */
   isolation: isolate;
   font-family: "Lato", sans-serif;
-  min-height: 100vh;
+}
+main {
+  position: relative;
 }
 
 // Inherit fonts for inputs and buttons */

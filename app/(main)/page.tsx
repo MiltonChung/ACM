@@ -1,7 +1,8 @@
+import Navbar from "@/components/Navbar";
 import styles from "@/styles/home.module.scss";
 import BackgroundSVG from "@/components/BackgroundSvg";
-import { WindowCards } from "@/components/WindowCards";
 import { LogoLightIcon } from "@/components/svg/logos";
+import { WindowCards } from "@/components/WindowCards";
 import { getHomepageWindows } from "@/sanity/sanity-utls";
 
 export default async function Home() {
@@ -9,6 +10,8 @@ export default async function Home() {
 
   return (
     <main className={styles.home}>
+      <Navbar />
+
       <div className={styles.landing}>
         <div className={styles.landingContent}>
           <LogoLightIcon className={styles.logo} />

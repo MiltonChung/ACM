@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import { capitalizeFirstLetter } from "@/lib";
 import styles from "@/styles/contact.module.scss";
 import { SocialMedia } from "@/types/SocialMedia";
@@ -19,35 +20,39 @@ export default async function ContactPage() {
   const socialMedias = await getSocialMedias();
 
   return (
-    <main className={styles.contactContainer}>
-      <BackgroundSVG numOfIcons={8} />
+    <main className={styles.short}>
+      <Navbar />
 
-      <div className={styles.contactContent}>
-        <h1>
-          Stay in <span>touch!</span>
-        </h1>
+      <div className={styles.contactContainer}>
+        <BackgroundSVG numOfIcons={8} />
 
-        <div className={styles.socialContainer}>
-          {socialMedias.map(({ socialMedia, _id: id, link }, index) => {
-            const Icon = socialMediaIconMap[socialMedia];
+        <div className={styles.contactContent}>
+          <h1>
+            Stay in <span>touch!</span>
+          </h1>
 
-            return (
-              <a
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={id}
-                style={{
-                  color: assignColorFromPosition(index),
-                }}
-              >
-                {Icon}
-                <span>
-                  {capitalizeFirstLetter(socialMedia)} <ExternalLinkIcon />
-                </span>
-              </a>
-            );
-          })}
+          <div className={styles.socialContainer}>
+            {socialMedias.map(({ socialMedia, _id: id, link }, index) => {
+              const Icon = socialMediaIconMap[socialMedia];
+
+              return (
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  key={id}
+                  style={{
+                    color: assignColorFromPosition(index),
+                  }}
+                >
+                  {Icon}
+                  <span>
+                    {capitalizeFirstLetter(socialMedia)} <ExternalLinkIcon />
+                  </span>
+                </a>
+              );
+            })}
+          </div>
         </div>
       </div>
     </main>
