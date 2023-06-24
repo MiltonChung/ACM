@@ -14,7 +14,7 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    min-height: 80vh;
+    min-height: 82vh;
     height: fit-content;
     display: flex;
     justify-content: center;
@@ -54,7 +54,7 @@
         font-size: var(--font-lg);
         font-style: italic;
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         margin-top: -1rem;
         text-shadow: 2px 2px 5px rgb(0, 0, 0);
       }
@@ -110,30 +110,38 @@
   }
 
   a.joinButton {
-    font-size: var(--font-2xl);
+    font-size: 40px;
     font-weight: var(--font-bold);
     text-align: center;
     padding: 1rem 4rem;
-    background: var(--acm-gray);
+    background: var(--acm-blue);
     border: 5px var(--acm-gray) solid;
-    box-shadow: 2px 4px 20px 0px rgba(80, 80, 80, 0.637);
-    margin-top: -2.5rem;
-    color: var(--acm-pink);
-    border-radius: 50rem;
+    box-shadow: 4px 4px 12px 0px rgb(0, 0, 0, 80%);
+    margin-top: -2.75rem;
+    color: var(--acm-gray);
+    border-radius: 999rem;
     transition: all 0.5s;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 6rem;
 
     @media only screen and (max-width: 768px) {
       border: 5px var(--acm-gray) solid;
       padding: 0.5rem 3rem;
-      font-size: var(--font-xl);
+      font-size: var(--font-2xl);
       margin-top: -2rem;
+      max-width: 17rem;
+      width: 100%;
+      height: 5rem;
     }
 
     &:hover {
-      background: var(--acm-pink);
-      color: var(--acm-gray);
-      border: 5px white solid;
+      background: var(--acm-gray);
+      color: var(--acm-blue);
+      border: 5px var(--acm-gray) solid;
     }
   }
 

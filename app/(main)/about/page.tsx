@@ -24,11 +24,12 @@ export default async function AboutPage() {
 
             <div className={styles.bubble}>
               <p>
-                We want to help students develop their technical and
-                professional skills and create a supportive and inclusive
-                environment for anyone interested in computer science.
-                Furthermore, we want to give them the opportunity to learn
-                beyond the classroom!
+                Our goal is to foster an inclusive and supportive environment
+                for students interested in computer-related majors, with a focus
+                on skill development beyond the classroom. Through cultivating
+                abilities outside traditional academic settings, we aim to
+                create a professional atmosphere that empowers students in their
+                educational pursuits.
               </p>
             </div>
           </div>
@@ -40,7 +41,14 @@ export default async function AboutPage() {
           <div className={styles.bubbleContainer}>
             <div className={styles.bubble}>
               <p>
-                That&apos;s great! To be more involved, click on our linktree
+                That&apos;s great! To be more involved, click on our{" "}
+                <a
+                  href="https://linktr.ee/ucscacm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  linktree
+                </a>{" "}
                 and follow us discord and instagram to stay updated about our
                 events. If you have any questions, don&apos;t hesitate to
                 contact us!
