@@ -1,10 +1,12 @@
 "use client";
 import * as React from "react";
 import Navbar from "@/components/Navbar";
+import { getEvents } from "@/sanity/sanity-utls";
 import styles from "@/styles/events.module.scss";
+import { EventsList } from "@/components/EventsList";
 import { RightArrowIcon } from "@/components/svg/icons";
 
-export default function EventsPage() {
+export default async function EventsPage() {
   const makeInvisible = (
     event: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>
   ) => {
@@ -12,6 +14,11 @@ export default function EventsPage() {
     element.style.opacity = "0";
     element.style.animation = "none";
   };
+
+  const futureEvents = await getEvents("future");
+  const pastEvents = await getEvents("past");
+
+  console.log(pastEvents);
 
   return (
     <main>
@@ -42,6 +49,10 @@ export default function EventsPage() {
             />
           </div>
         </div>
+
+        <EventsList events={futureEvents} title="Upcoming Events" />
+
+        <EventsList events={pastEvents} title="Past Events" />
       </div>
     </main>
   );

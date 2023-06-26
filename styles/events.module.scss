@@ -36,6 +36,86 @@
     }
   }
 
+  .eventsList {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+
+    h2 {
+      text-align: left;
+    }
+
+    .eventsListContainer {
+      margin: 1rem 0;
+
+      .noEvents {
+        font-size: var(--font-lg);
+      }
+
+      .eventCard {
+        padding: 1rem;
+        border: 2px solid var(--acm-blue);
+        border-radius: 0.25rem;
+        margin-bottom: 2rem;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+        display: flex;
+        position: relative;
+        height: fit-content;
+
+        .cardLeft {
+          margin-right: 1rem;
+
+          img {
+            width: 10rem;
+            height: 10rem;
+            border-radius: 5px;
+            object-fit: cover;
+            box-shadow: 3px 3px 5px rgba(83, 83, 83, 0.25);
+          }
+        }
+
+        .cardRight {
+          h3 {
+            font-size: var(--font-lg);
+            margin-right: 120px;
+          }
+
+          .subtitle {
+            font-size: var(--font-sm);
+            margin-bottom: 0.25rem;
+            font-style: italic;
+            color: rgb(136, 136, 136);
+            margin-top: -0.2rem;
+            margin-right: 120px;
+          }
+
+          p {
+            font-size: var(--font-base);
+          }
+        }
+
+        a {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          font-size: var(--font-base);
+          border: 1px solid var(--acm-pink);
+          padding: 0.4rem 0.8rem;
+          font-weight: var(--font-medium);
+          border-radius: 0.25rem;
+          background: var(--acm-pink);
+          color: var(--acm-white);
+          text-decoration: none;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            background: var(--acm-blue);
+            border: 1px solid var(--acm-blue);
+          }
+        }
+      }
+    }
+  }
+
   @media (max-width: 768px) {
     width: 95%;
 
@@ -86,6 +166,56 @@
         width: 60rem;
         border: 2px solid var(--acm-blue);
         padding: 0.25rem;
+      }
+    }
+
+    .eventsList {
+      margin-top: 3rem;
+      margin-bottom: 5rem;
+
+      h2 {
+        text-align: left;
+      }
+
+      .eventsListContainer {
+        .eventCard {
+          max-width: 350px;
+          width: 100%;
+          flex-direction: column;
+          align-items: center;
+          margin: 1.5rem auto;
+
+          .cardLeft {
+            margin-right: 0;
+
+            img {
+              width: 14rem;
+              height: 14rem;
+            }
+          }
+
+          .cardRight {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            h3 {
+              margin-right: 0;
+            }
+
+            .subtitle {
+              margin-right: 0;
+            }
+          }
+
+          a {
+            position: relative;
+            top: unset;
+            right: unset;
+            margin-top: 1rem;
+          }
+        }
       }
     }
   }

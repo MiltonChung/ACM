@@ -4,6 +4,7 @@ import { Resource } from "@/types/Resrouce";
 import { BoardMember } from "@/types/BoardMember";
 import { SocialMedia } from "@/types/SocialMedia";
 import { HomepageWindow } from "@/types/HomepageWindow";
+import { Event } from "@/types/Event";
 
 export async function getBoardMembers(): Promise<BoardMember[]> {
   return client.fetch(
@@ -53,6 +54,28 @@ export async function getSocialMedias(): Promise<SocialMedia[]> {
       orderID,
       socialMedia,
       link
+    }`
+  );
+}
+
+export async function getEvents(type?: "past" | "future"): Promise<Event[]> {
+  let filter = "";
+  if (type === "past") {
+    filter = "&& date < now()";
+  } else if (type === "future") {
+    filter = "&& date >= now()";
+  }
+
+  return client.fetch(
+    groq`*[_type == "event" ${filter}] | order(date desc) [0..15] {
+      _id,
+      _createdAt,
+      name,
+      date,
+      location,
+      "image": image.asset->url,
+      summary,
+      buttonLink
     }`
   );
 }
