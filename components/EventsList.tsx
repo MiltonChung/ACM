@@ -1,11 +1,11 @@
 import dayjs from "dayjs";
 import Image from "next/image";
 import * as React from "react";
+import { Event } from "@/types/Event";
 import acm from "@/public/acm-highres.png";
 import { FComponent } from "@/types/commons";
 import styles from "@/styles/events.module.scss";
 import { PortableText } from "@portabletext/react";
-import { Event } from "@/types/Event";
 
 type EventsListProps = {
   events: Event[];
@@ -29,6 +29,7 @@ const EventsList: FComponent<EventsListProps> = ({ events, title }) => {
                   height={150}
                 />
               </div>
+
               <div className={styles.cardRight}>
                 <h3>{event.name}</h3>
 
@@ -40,13 +41,13 @@ const EventsList: FComponent<EventsListProps> = ({ events, title }) => {
                 <PortableText value={event.summary} />
               </div>
 
-              {event.buttonLink ? (
+              {event.buttonLink && event.buttonText ? (
                 <a
                   href={event.buttonLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Learn more
+                  {event.buttonText}
                 </a>
               ) : null}
             </div>

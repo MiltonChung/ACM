@@ -1,23 +1,9 @@
 import Navbar from "@/components/Navbar";
+import { PortableText } from "@portabletext/react";
 import { getResources } from "@/sanity/sanity-utls";
 import styles from "@/styles/resources.module.scss";
 import BackgroundSVG from "@/components/BackgroundSvg";
-import { PortableText, PortableTextReactComponents } from "@portabletext/react";
-
-const components: Partial<PortableTextReactComponents> = {
-  marks: {
-    link: ({ value, children }) => {
-      const { blank, href } = value;
-      return blank ? (
-        <a href={href} target="_blank" rel="noopener noreferrer">
-          {children}
-        </a>
-      ) : (
-        <a href={href}>{children}</a>
-      );
-    },
-  },
-};
+import { ExternalLink } from "@/components/ExternalLink";
 
 export default async function ResourcesPage() {
   const resources = await getResources();
@@ -37,7 +23,7 @@ export default async function ResourcesPage() {
             return (
               <div className={styles.resourcesSection} key={id}>
                 <PortableText value={title} />
-                <PortableText value={description} components={components} />
+                <PortableText value={description} components={ExternalLink} />
               </div>
             );
           })}

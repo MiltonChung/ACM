@@ -82,11 +82,18 @@ const events = {
       validation: (Rule: Rule) => [Rule.required().error("Required")],
     },
     {
+      name: "buttonText",
+      title: "Button Text",
+      type: "string",
+      description:
+        "(Optional) Make sure if you have button text filled out, you also have to fill out button link. If you have a link to anything related to the event, put it here. Try to keep it short. ",
+    },
+    {
       name: "buttonLink",
       title: "Button Link",
       type: "url",
       description:
-        "(Optional) If you have a link to anything related to the event, put it here.",
+        "(Optional) Make sure if you have button link filled out, you also have to fill out button text. If you have a link to anything related to the event, put it here. ",
     },
   ],
 };

@@ -75,7 +75,8 @@ export async function getEvents(type?: "past" | "future"): Promise<Event[]> {
       location,
       "image": image.asset->url,
       summary,
-      buttonLink
+      buttonLink,
+      buttonText
     }`
   );
 }

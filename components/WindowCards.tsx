@@ -1,5 +1,6 @@
 import * as React from "react";
 import { FComponent } from "@/types/commons";
+import { ExternalLink } from "./ExternalLink";
 import styles from "../styles/home.module.scss";
 import { PortableText } from "@portabletext/react";
 import { HomepageWindow } from "@/types/HomepageWindow";
@@ -22,7 +23,7 @@ const WindowCards: FComponent<WindowCardsProps> = ({ windowCards }) => {
 
             <div className={styles.windowCardContent}>
               <h2>{title}</h2>
-              <PortableText value={description} />
+              <PortableText value={description} components={ExternalLink} />
             </div>
 
             {buttonLink && buttonText ? (

@@ -18,8 +18,6 @@ export default async function EventsPage() {
   const futureEvents = await getEvents("future");
   const pastEvents = await getEvents("past");
 
-  console.log(pastEvents);
-
   return (
     <main>
       <Navbar />
@@ -51,7 +49,6 @@ export default async function EventsPage() {
         </div>
 
         <EventsList events={futureEvents} title="Upcoming Events" />
-
         <EventsList events={pastEvents} title="Past Events" />
       </div>
     </main>

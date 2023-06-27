@@ -9,4 +9,5 @@ export type Event = {
   image?: string;
   summary: PortableTextBlock[];
   buttonLink?: string;
+  buttonText?: string;
 };

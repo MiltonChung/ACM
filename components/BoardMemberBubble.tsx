@@ -2,6 +2,7 @@ import Image from "next/image";
 import { classNames } from "@/lib";
 import acm from "@/public/acm.png";
 import { FComponent } from "@/types/commons";
+import { ExternalLink } from "./ExternalLink";
 import { BoardMember } from "@/types/BoardMember";
 import { PortableText } from "@portabletext/react";
 import styles from "@/styles/boardMemberBubble.module.scss";
@@ -48,7 +49,7 @@ const BoardMemberBubble: FComponent<BoardMemberBubbleProps> = ({
                     avatarLocation === "left" ? styles.left : styles.right
                   )}
                 >
-                  <PortableText value={description} />
+                  <PortableText value={description} components={ExternalLink} />
                 </div>
               </div>
 

@@ -60,6 +60,7 @@
         display: flex;
         position: relative;
         height: fit-content;
+        background: var(--acm-white);
 
         .cardLeft {
           margin-right: 1rem;
@@ -110,6 +111,7 @@
           &:hover {
             background: var(--acm-blue);
             border: 1px solid var(--acm-blue);
+            color: var(--acm-white);
           }
         }
       }
@@ -170,11 +172,8 @@
     }
 
     .eventsList {
-      margin-top: 3rem;
-      margin-bottom: 5rem;
-
       h2 {
-        text-align: left;
+        margin-bottom: -1rem;
       }
 
       .eventsListContainer {
@@ -202,10 +201,12 @@
 
             h3 {
               margin-right: 0;
+              margin-bottom: 0.25rem;
             }
 
             .subtitle {
               margin-right: 0;
+              margin-bottom: 0.5rem;
             }
           }
 
