@@ -58,16 +58,25 @@ export async function getSocialMedias(): Promise<SocialMedia[]> {
   );
 }
 
-export async function getEvents(type?: "past" | "future"): Promise<Event[]> {
-  let filter = "";
-  if (type === "past") {
-    filter = "&& date < now()";
-  } else if (type === "future") {
-    filter = "&& date >= now()";
-  }
-
+export async function getFutureEvents(): Promise<Event[]> {
   return client.fetch(
-    groq`*[_type == "event" ${filter}] | order(date desc) [0..15] {
+    groq`*[_type == "event" && date >= now()] | order(date desc) [0..15] {
+      _id,
+      _createdAt,
+      name,
+      date,
+      location,
+      "image": image.asset->url,
+      summary,
+      buttonLink,
+      buttonText
+    }`
+  );
+}
+
+export async function getPastEvents(): Promise<Event[]> {
+  return client.fetch(
+    groq`*[_type == "event" && date < now()] | order(date desc) [0..15] {
       _id,
       _createdAt,
       name,
